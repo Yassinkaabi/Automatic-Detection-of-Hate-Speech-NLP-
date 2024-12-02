@@ -1,0 +1,24 @@
+{% extends "base.html" %}>
+{% block content %}
+
+<div class="container" style="display: flex;justify-content: space-between;align-items: center;">
+  <h2>Comments</h2>
+  <li class="nav-item">
+    <a class="btn btn-primary" href="{{ url_for('create')}}">New Post</a>
+  </li>
+</div>
+<ul class="fetch_comments">
+  {% for comment in comments %}
+  <li style="padding-top: 20px;">
+    <h3> {{ comment['text'] }}</h3>
+    <div style="display: flex; align-items: center;gap: 15px;padding-top: 5px;">
+      <a class="btn btn-info" href="/comment/{{ comment['_id'] }}">View</a>
+      <form action="/comment/{{ comment['_id'] }}" method="POST" style="display:inline">
+        <input type="hidden" name="_method" value="DELETE">
+        <button class="btn btn-danger" type="submit">Delete</button>
+      </form>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

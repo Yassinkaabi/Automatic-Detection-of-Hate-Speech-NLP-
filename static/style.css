@@ -1,0 +1,33 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+  padding-top: 10px;
+  padding-bottom: 40px;
+
+}
+h1 {
+  border: 2px #eee solid;
+  color: brown;
+  text-align: center;
+  padding: 10px;
+}
+.nav-item {
+  list-style-type: none;
+}
+.nav-link {
+  text-decoration: none;
+  padding: 10px 5px;
+  background-color: blueviolet;
+  color: #eee;
+  border-radius: 5px;
+}
+.fetch_comments {
+  width: 100%;
+  background-color: rgb(238, 246, 246);
+  padding: 30px 40px;
+}
